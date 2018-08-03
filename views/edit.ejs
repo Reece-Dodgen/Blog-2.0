@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us || New Post</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">#</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="/archive">Archive</a>
+                        </li>
+                        <li class="active">
+                            <a href="/contact">Contact</a>
+                        </li>
+                        <li class="active">
+                            <a href="/create">Create</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container formContainer">
+            <form method="post">
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputName">Title</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Enter title name..."
+                        name="title" value="<%= posts.title %>">
+                    <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputName">Author</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Name of author..."
+                        name="author" value="<%= posts.author %>">
+                    <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputName">Content</label>
+                    <textarea id="summernote" name="content">
+                        <%= posts.content %>
+                    </textarea>
+
+                    <script>
+                        $(document).ready(function () {
+                            $('#summernote').summernote({
+                                height: 200
+                            });
+                        });
+                    </script>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                    <a href="/">
+                        <button class="btn-left" type="submit" class="btn btn-primary btn-block">Update</button>
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+</head>
+
+<body class="container-fluid">
+  <div class="container-fluid">
+
+
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="padding-top: 0px">
+            <img src="/images/SoccerAssist-Logo-2017-colour.png" alt="" width="45px" height="45px">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="/">Home</a>
+            </li>
+            <li class="active">
+              <a href="/archive">Archive</a>
+            </li>
+            <li class="active">
+              <a href="/contact">Contact</a>
+            </li>
+            <li class="active">
+              <a href="/create">Create</a>
+            </li>
+            <li class="active">
+              <a href="/signUp">Sign Up</a>
+            </li>
+            <li class="active">
+                <a href="/login">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      
+        <% if (posts) { %>
+          <% posts.forEach(function(post){ %>
+            <div class="col-md-6">
+              <div class="panel panel-primary">
+                <div id="heading" class="panel-heading">
+                  <h3 class="panel-title">
+                    <%= post.title %>
+                  </h3>
+                </div>
+
+                <div class="panel-body">
+                  <%- post.content.substring(0, 150); %>...
+                </div>
+
+                <div class="button">
+                  <a href="/view/<%= post.id %>">
+                    <button class="btn-left" type="button">
+                      <span>Read More</span>
+                    </button>
+                  </a>
+
+                  <a href="/delete/<%= post.id %>" onclick="refreshPage()">
+                    <button class="btn-right" type="submit">
+                      <span>Delete</span>
+                    </button>
+                  </a>
+
+                  <a href="/edit/<%= post.id %>">
+                    <button class="btn-right" type="button">
+                      <span>Edit</span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="panel-footer">
+                  Author:
+                  <%= post.author %>
+                </div>
+              </div>
+            </div>
+
+
+            <% }); %>
+              <% } %>
+    </div>
+
+
+    <div class="footer-basic">
+      <footer>
+        <div class="social">
+          <a href="#">
+            <i class="icon ion-social-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="icon ion-social-snapchat"></i>
+          </a>
+          <a href="#">
+            <i class="icon ion-social-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="icon ion-social-facebook"></i>
+          </a>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="copyright">Company Name 2018</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+
+    function refreshPage() {
+      window.location.reload();
+    }
+
+  </script>
+</body>
+
+</html>

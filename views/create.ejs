@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Post</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+</head>
+
+<body class="container-fluid">
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" style="padding-top: 0px"><img src="/images/SoccerAssist-Logo-2017-colour.png" alt="" width="45px" height="45px"></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="/archive">Archive</a>
+                        </li>
+                        <li class="active">
+                            <a href="/contact">Contact</a>
+                        </li>
+                        <li class="active">
+                            <a href="/create">Create</a>
+                        </li>
+                        <li class="active">
+                            <a href="/signUp">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="well well-sm">
+                    <form class="form-horizontal" method="post" action="/create">
+                        <fieldset>
+                            <legend class="text-center">New Post</legend>
+
+                            <!-- Name input-->
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="title">title</label>
+                                <div class="col-md-9">
+                                    <input id="Title" name="title" type="text" placeholder="title" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Email input-->
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="timedate">date/title</label>
+                                <div class="col-md-9">
+                                    <input id="timedate" name="timedate" type="text" placeholder="time/date" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="imageUrl">Image url</label>
+                                <input type="url" class="form-control" placeholder="Image url..." id="Title" name="img" name="">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="content">Content</label>
+                                <textarea id="summernote" name="content"></textarea>
+                            </div>
+
+
+                            <!-- Message body -->
+                            <div class="form-group">
+
+                                <script>
+                                    $(document).ready(function () {
+                                        $('#summernote').summernote(
+                                            {
+                                                height: 150
+                                            }
+                                        );
+                                    });
+                                </script>
+                            </div>
+                </div>
+
+                <!-- Form actions -->
+                <div class="form-group">
+                    <div class="col-md-12 text-right">
+                        <button class="btn-left" type="submit" class="btn btn-primary btn-lg">Post</button>
+                    </div>
+                </div>
+                </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-basic">
+        <footer>
+          <div class="social">
+            <a href="#">
+              <i class="icon ion-social-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="icon ion-social-snapchat"></i>
+            </a>
+            <a href="#">
+              <i class="icon ion-social-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="icon ion-social-facebook"></i>
+            </a>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Services</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+            <p class="copyright">Company Name 2018</p>
+          </div>
+        </footer>
+      </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

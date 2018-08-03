@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+</head>
+
+<body class="container-fluid">
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" style="padding-top: 0px">
+                        <img src="/images/SoccerAssist-Logo-2017-colour.png" alt="" width="45px" height="45px">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="/archive">Archive</a>
+                        </li>
+                        <li class="active">
+                            <a href="/contact">Contact</a>
+                        </li>
+                        <li class="active">
+                            <a href="/create">Create</a>
+                        </li>
+                        <li class="active">
+                            <a href="/signUp">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="well well-sm">
+                    <form class="form-horizontal" action="/contact" method="POST">
+                        <fieldset>
+                            <legend class="text-center">New Post</legend>
+
+                            <!-- Name input-->
+        <!-- <div class="form-group">
+                                <label class="col-md-3 control-label" for="name">title</label>
+                                <div class="col-md-9">
+                                    <input id="name" name="name" type="text" placeholder="title" class="form-control">
+                                </div>
+                            </div> -->
+
+        <!-- Email input-->
+        <!-- <div class="form-group">
+                                <label class="col-md-3 control-label" for="date/time">date/title</label>
+                                <div class="col-md-9">
+                                    <input id="dateTime" name="dateTime" type="text" placeholder="date/time" class="form-control">
+                                </div>
+                            </div> -->
+
+        <!-- Message body -->
+        <!-- <div class="form-group">
+                                <label class="col-md-3 control-label" for="message">Your message</label>
+                                <div class="col-md-9">
+                                    <textarea name="content" id="summernote">
+                                    
+                                    </textarea>
+                                    <script>
+                                        $(document).ready(function(){
+                                            $('#summernote').summernote(
+                                                {
+                                                    height: 150
+                                                }
+                                            );
+                                        });
+                                    </script>
+                                </div>
+                            </div> -->
+
+        <!-- Form actions -->
+        <!-- <div class="form-group">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn btn-primary btn-lg">Post</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container">
+            <div class="contact-clean">
+                <form method="post">
+                    <h2 class="text-center">Contact Us</h2>
+
+
+                    <div class="form-group has-success has-feedback">
+                        <input class="form-control" type="text" name="name" placeholder="name">
+                    </div>
+
+
+                    <div class="form-group has-success has-feedback">
+                        <input class="form-control" type="text" name="email" placeholder="email">
+                        <p class="help-block">
+                            Please enter a correct email address.
+                        </p>
+                    </div>
+
+
+                    <div class="form-group">
+                        <textarea class="form-control" rows="14" name="message" placeholder="Message"></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class="btn-left" class="btn btn-primary" type="submit">Send</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-basic">
+            <footer>
+                <div class="social">
+                    <a href="#">
+                        <i class="icon ion-social-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon ion-social-snapchat"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon ion-social-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon ion-social-facebook"></i>
+                    </a>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Services</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    <p class="copyright">Company Name 2018</p>
+                </div>
+            </footer>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
